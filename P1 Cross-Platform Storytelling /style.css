@@ -1,0 +1,42 @@
+body {
+	background: rgb(12,154,240);
+	background: linear-gradient(180deg, rgba(12,154,240,1) 0%, rgba(76,174,246,1) 100%);
+	background-attachment: fixed;
+}
+
+h1 {
+	top: 0;
+	left: 0;
+	font-family: 'Caveat', cursive;
+	font-size: 30px;
+	color: white;
+}
+
+p {
+	margin-top: 175px;
+	margin-right: 400px;
+	margin-left: 50px;
+	font-family: 'Rozha One', serif;
+	font-size: 60px;
+	line-height: 60px;
+	color: white;
+}
+
+button {
+	border: none;
+	border-radius: 10px;
+	font-family: 'Caveat', cursive;
+	font-size: 30px;
+	padding: 15px;
+	margin-left: 50px;
+	color: white;
+	background-color: #ff8800;
+}
+
+button:hover {
+	color: #ff8800;
+	background-color: white;
+}
+
+
+

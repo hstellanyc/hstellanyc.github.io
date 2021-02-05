@@ -1,0 +1,78 @@
+audio {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 60px;
+}
+
+body {
+	background-image: url("pixelsky.jpg");
+}
+
+a {
+	font-family: 'VT323', monospace;
+	color: white;
+	font-size: 36px;
+}
+
+img {
+	margin-right: 300px;
+	margin-left: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	display: flex;
+	border-radius: 10%;
+}
+
+h1 {
+	font-family: 'Shrikhand', cursive;
+	text-align: center;
+	font-size: 60px;
+	color: hotpink;
+}
+
+h2 {
+	font-family: 'Shrikhand', cursive;
+	margin-right: 200px;
+	margin-left: 800px;
+	font-size: 48px;
+	color: hotpink;
+}
+
+h3 {
+	font-family: 'Shrikhand', cursive; 
+	font-size: 48px;
+	margin-right: 800px;
+	margin-left: 200px;
+	color: hotpink;
+}
+
+article {
+	margin-left: 300px;
+	margin-right: 800px;
+	font-family: 'VT323', monospace;
+	color: white;
+	font-size: 36px;
+}
+
+section {
+	margin-left: 300px;
+	margin-right: 800px;
+	font-family: 'VT323', monospace;
+	color: white;
+	font-size: 36px;
+}
+
+.reg {
+	font-family: 'VT323', monospace;
+	color: white;
+	font-size: 36px;
+}
+
+.girl {
+	margin-left: 800px;
+	font-family: 'VT323', monospace;
+	color: white;
+	font-size: 36px;
+}
+

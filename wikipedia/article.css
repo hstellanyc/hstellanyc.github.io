@@ -1,0 +1,46 @@
+body {
+	background: rgb(26,0,125);
+	background: linear-gradient(0deg, rgba(26,0,125,1) 0%, rgba(86,148,255,1) 100%);
+}
+
+h1 {
+	margin-top: 200px;
+	font-family: 'Tangerine', cursive;
+	font-size: 60px;
+	color: #fff7e3;
+	animation: gleam 10s infinite;
+}
+
+li {
+	margin-right: 500px;
+	margin-left: 300px;
+	font-family: 'Jim Nightshade', cursive;
+	font-size: 24px;
+	color: #fff7e3;
+}
+
+p {
+	margin-right: 500px;
+	margin-left: 300px;
+	font-family: 'Jim Nightshade', cursive;
+	font-size: 24px;
+	color: #fff7e3;
+}
+
+@keyframes gleam {
+	0% {
+		color: #fff7e3;
+	}
+	25% {
+		color: #fff2d7;
+	}
+	50% {
+		color: #ac0811;
+	}
+	75% {
+		color: #ffaf00;
+	}
+	100% {
+		color: #fff7e3;
+	}
+}

@@ -1,0 +1,277 @@
+body {
+	background: rgb(255,252,197);
+	background: radial-gradient(circle, rgba(255,252,197,1) 0%, rgba(255,174,0,1) 100%);
+	background-image: url("paradiso.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 75%;
+}
+
+a.introduction {
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 35%;
+	font-family: 'cinzel', serif;
+	font-size: 100px;
+	color: gold;
+	text-decoration: none;
+	animation: gleam 15s infinite;
+}
+
+a.introduction:hover {
+	opacity: 50%;
+}
+
+audio {
+	opacity: 30%;
+}
+
+#circle1 {
+	width: 200px;
+	height: 200px;
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	background: radial-gradient(circle, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%, rgba(131,58,180,1) 100%);
+	border-radius: 50%;
+	animation: first 50s infinite;
+
+}
+
+#circle2 {
+	width: 200px;
+	height: 200px;
+	position: fixed;
+	left: 100px;
+	background: radial-gradient(circle, rgba(253,187,45,1) 0%, rgba(34,193,195,1) 100%);
+	border-radius: 50%;
+	animation: second 70s infinite;
+}
+
+#circle3 {
+	width: 200px;
+	height: 200px;
+	position: fixed;
+	left: 200px;
+	background: radial-gradient(circle, rgba(15,12,126,1) 0%, rgba(29,59,253,1) 50%, rgba(223,255,253,1) 100%);
+	border-radius: 50%;
+	animation: third 90s infinite;
+}
+
+#circle4 {
+	width: 200px;
+	height: 200px;
+	position: fixed;
+	left: 300px;
+	background: radial-gradient(circle, rgba(161,29,253,1) 0%, rgba(249,0,255,1) 53%, rgba(255,146,254,1) 100%);
+	border-radius: 50%;
+	animation: fourth 80s infinite;
+}
+
+#circle5 {
+	width: 200px;
+	height: 200px;
+	position: fixed;
+	left: 400px;
+	background: radial-gradient(circle, rgba(255,0,108,1) 15%, rgba(0,37,215,1) 39%, rgba(114,255,0,1) 100%);
+	border-radius: 50%;
+	animation: fifth 70s infinite;
+}
+
+#circle6 {
+	width: 200px;
+	height: 200px;
+	position: fixed;
+	left: 500px;
+	background: radial-gradient(circle, rgba(215,65,0,1) 0%, rgba(255,162,0,1) 57%, rgba(255,225,0,1) 100%);
+	border-radius: 50%;
+	animation: sixth 30s infinite;
+}
+
+#circle7 {
+	width: 200px;
+	height: 200px;
+	position: fixed;
+	left: 600px;
+	background: radial-gradient(circle, rgba(255,0,108,1) 15%, rgba(215,114,0,1) 39%, rgba(114,255,0,1) 100%);
+	border-radius: 50%;
+	animation: seventh 80s infinite;
+}
+
+#circle8 {
+	width: 200px;
+	height: 200px;
+	position: fixed;
+	left: 700px;
+	background: radial-gradient(circle, rgba(255,95,0,1) 15%, rgba(215,197,0,1) 39%, rgba(0,142,255,1) 100%);
+	border-radius: 50%;
+	animation: eighth 60s infinite;
+}
+
+#circle9 {
+	width: 200px;
+	height: 200px;
+	position: fixed;
+	left: 800px;
+	background: radial-gradient(circle, rgba(255,27,0,1) 15%, rgba(215,0,155,1) 39%, rgba(115,121,255,1) 100%);
+	border-radius: 50%;
+	animation: ninth 80s infinite;
+}
+
+div:hover {
+	opacity: 50%;
+}
+
+@keyframes first {
+  0% {
+    left: 0%;
+    top: 0%;
+  }
+  50% {
+  	left: 100%;
+    top: 100%;
+  }
+  100% {
+    left: 0%;
+    top: 0%;
+  }
+}
+
+@keyframes second {
+  0% {
+    left: 100%;
+    top: 0%;
+  }
+  50% {
+  	left: 0%;
+    top: 100%;
+  }
+  100% {
+    left: 100%;
+    top: 0%;
+  }
+}
+
+@keyframes third {
+  0% {
+    left: 70%;
+    top: 100%;
+  }
+  50% {
+  	left: 50%;
+    top: 0%;
+  }
+  100% {
+    left: 70%;
+    top: 100%;
+  }
+}
+
+@keyframes fourth {
+  0% {
+    left: 70%;
+    top: 70%;
+  }
+  50% {
+  	left: 0%;
+    top: 0%;
+  }
+  100% {
+    left: 70%;
+    top: 70%;
+  }
+}
+
+@keyframes fifth {
+  0% {
+    left: 100%;
+    top: 30%;
+  }
+  50% {
+  	left: 70%;
+    top: 0%;
+  }
+  100% {
+    left: 100%;
+    top: 30%;
+  }
+}
+
+@keyframes sixth {
+  0% {
+    left: 50%;
+    top: 60%;
+  }
+  50% {
+  	left: 25%;
+    top: 50%;
+  }
+  100% {
+    left: 50%;
+    top: 60%;
+  }
+}
+
+@keyframes seventh {
+  0% {
+    left: 0%;
+    top: 100%;
+  }
+  50% {
+  	left: 50%;
+    top: 0%;
+  }
+  100% {
+    left: 0%;
+    top: 100%;
+  }
+}
+
+@keyframes eighth {
+  0% {
+    left: 700px;
+    top: 0%;
+  }
+  50% {
+  	left: 20%;
+    top: 20%;
+  }
+  100% {
+    left: 700px;
+    top: 0%;
+  }
+}
+
+@keyframes ninth {
+  0% {
+    left: 0%;
+    top: 50%;
+  }
+  50% {
+  	left: 25%;
+    top: 0%;
+  }
+  100% {
+    left: 0%;
+    top: 50%;
+  }
+}
+
+@keyframes gleam {
+  0% {
+    color: gold;
+  }
+  25% {
+  	color: #ffcbda;
+  }
+  50% {
+  	color: #9ad4f6;
+  }
+  75% {
+  	color: #f6ffec;
+  }
+  100% {
+    color: gold;
+  }
+}

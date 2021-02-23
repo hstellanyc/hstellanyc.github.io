@@ -11,7 +11,7 @@ header {
 
 .title {
 	font-size: 48px;
-	font-family: amador;
+	font-family: amador, sans serif;
 	letter-spacing: 2px;
 	color: white;
 	text-align: center;

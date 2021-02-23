@@ -1,0 +1,71 @@
+body {
+	background-color: black;
+	color: white;
+}
+
+header {
+	position: relative;
+	margin-top: 3%;
+	margin-bottom: 5%;
+}
+
+.title {
+	font-size: 48px;
+	font-family: amador;
+	letter-spacing: 2px;
+	color: white;
+	text-align: center;
+	position: relative;
+	display:inline-block;
+	width: 100%;
+}
+
+div {
+	color: white;
+	line-height: 28px;
+	width: 100%;
+	max-width: 100%;
+	display: flex;
+	text-overflow: string;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+span {
+	display: flex;
+	font-size: 24px;
+	font-family: 'Libre Baskerville', 'Times New Roman', serif;
+	color: white;
+	margin-right: 25%;
+	margin-left: 25%;
+	line-height: 28px;
+	text-overflow: string;
+
+}
+
+.wrong:hover {
+	color: red;
+}
+
+.right:hover {
+	color: lightgreen;
+}
+
+@media only screen and (max-width: 667px) {
+
+.reveal .wrong {
+	transition: color 0.5s ease-in;
+	color: red;
+}
+
+.reveal .right {
+	transition: color 0.5s ease-in;
+	color: lightgreen;
+}
+
+
+
+ 

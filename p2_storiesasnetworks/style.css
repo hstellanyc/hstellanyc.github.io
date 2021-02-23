@@ -1,6 +1,10 @@
+@font-face {
+
+}
+
 body {
   background-attachment: fixed;
-  font-family: amador;
+  font-family: amador, sans serif;
   letter-spacing: 2px;
   text-align: center;
   align-items: center;

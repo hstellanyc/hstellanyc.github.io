@@ -10,7 +10,7 @@ header {
 }
 
 .title {
-	font-size: 48px;
+	font-size: 72px;
 	font-family: amador, sans serif;
 	letter-spacing: 2px;
 	color: white;
@@ -20,30 +20,28 @@ header {
 	width: 100%;
 }
 
-div {
-	color: white;
-	line-height: 28px;
-	width: 100%;
-	max-width: 100%;
-	display: flex;
-	text-overflow: string;
-}
-
 a {
 	color: white;
 	text-decoration: none;
 }
 
+div {
+	color: white;
+	line-height: 28px;
+	width: 50%;
+	max-width: 100%;
+	justify-content: center;
+	margin: 25%;
+    margin-top: 0%;
+    margin-bottom: 5%;
+}
+
+
 span {
-	display: flex;
 	font-size: 24px;
 	font-family: 'Libre Baskerville', 'Times New Roman', serif;
 	color: white;
-	margin-right: 25%;
-	margin-left: 25%;
-	line-height: 28px;
-	text-overflow: string;
-
+	margin: 0%;
 }
 
 .wrong:hover {
@@ -51,21 +49,66 @@ span {
 }
 
 .right:hover {
-	color: lightgreen;
+	color: #49fb35;
+	animation: paused;
 }
 
-@media only screen and (max-width: 667px) {
-
-.reveal .wrong {
-	transition: color 0.5s ease-in;
-	color: red;
+span.right {
+	animation-name: glow;
+	animation-duration: 1s; 
+  	animation-timing-function: ease-in-out;
+  	animation-iteration-count: infinite;
 }
 
-.reveal .right {
-	transition: color 0.5s ease-in;
-	color: lightgreen;
+footer {
+	margin-bottom: 3%;
+	text-align: center;
+	font-size: 48px;
 }
 
+@keyframes glow {
+	0% {
+		color: white;
+	}
+	50% {
+		color: #49fb35;
+	}
+	100% {
+		color: white;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+.title {
+	font-size: 60px;
+	font-family: amador, sans serif;
+	letter-spacing: 2px;
+	color: white;
+	text-align: center;
+	position: relative;
+	display:inline-block;
+	width: 100%;
+	max-width: 100%
+}
+
+div {
+	color: white;
+	line-height: 28px;
+	width: 100%;
+	max-width: 90%;
+	justify-content: center;
+	margin: 0%;
+	margin-left: 5%;
+}
+
+span {
+	font-size: 24px;
+	font-family: 'Libre Baskerville', 'Times New Roman', serif;
+	color: white;
+	margin: 0%;
+}
+  
+}
 
 
  

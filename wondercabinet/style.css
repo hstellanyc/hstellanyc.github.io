@@ -1,0 +1,40 @@
+body {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+h1 {
+	font-family: 'Shrikhand', cursive;
+	font-size: 60px;
+	color: black;
+	text-align: center;
+}
+
+div {
+	border: 2px solid;
+	box-sizing: border-box;
+	max-width: auto;
+	max-height: auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+}
+
+picture {
+	border: 2px solid;
+}
+
+img {	
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+@media only screen and (max-width: 500px) {
+
+div {
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(6, 1fr);
+}
+}
+

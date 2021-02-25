@@ -4,13 +4,9 @@ body {
   letter-spacing: 2px;
   text-align: center;
   align-items: center;
-  margin-top: 15%;
-}
-
-hr {
-  margin-top: 5%;
-  margin-left: 40%;
-  margin-right: 40%;
+  margin-top: 13%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 h1 {
@@ -20,50 +16,51 @@ h1 {
   text-align: center;
 }
 
-h2 {
-  font-size: 30px;
-  color: black;
-  line-height: 20px;
+a {
+  font-size: 160px;
   text-align: center;
-  font-family: 'Libre Baskerville', 'Times New Roman', serif;
-  letter-spacing: 0px;
+  color: black;
+  opacity: 15%;
 }
 
-p {
-  margin-right: auto;
-  margin-left:  auto;
-  padding-right: 25%;
-  padding-left: 25%;
+a:hover {
+  opacity: 100%;
+  color: red;
+}
+
+a#right:hover {
+  color: #49fb35;
+}
+
+span {
   color: black;
-  text-align: center;
-  font-family: 'Libre Baskerville', 'Times New Roman', serif;
+  font-size: 14px;
+  line-height: 18px;
   letter-spacing: 0px;
+  font-family: 'Libre Baskerville', 'Times New Roman', serif;
 }
 
 div.scroll {
-  top: 50%
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   width: 100%;
   height: 300px;
+  max-height: 100%;
   overflow: scroll;
 }
 
 .hover {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
+  border-bottom: none;
 }
 
 .hover .hovertext {
   visibility: hidden;
   width: 200px;
   background-color: transparent;
-  color: black;
   text-align: center;
   border-radius: 6px;
-  top: 50%;
+  top: 65%;
   left: 35%;
   margin-left: -60px;
   position: absolute;
@@ -74,26 +71,179 @@ div.scroll {
   visibility: visible;
 }
 
-a {
-  font-size: 150px;
-  text-align: center;
+h2 {
+  display: inline-block;
+  margin-bottom: 0%;
+  font-size: 36px;
   color: black;
-  opacity: 25%;
+  opacity: 65%;
+  line-height: 10px;
+  text-align: center;
+  font-family: amador, sans serif;
+  letter-spacing: 1px;
 }
 
-a#green:hover {
-  color: lightgreen;
+p {
+  display: inline-block;
+  max-width: 45%;
+  margin-right: auto;
+  margin-left:  auto;
+  padding-right: 25%;
+  padding-left: 25%;
+  color: black;
+  opacity: 65%;
+  text-align: center;
+  font-family: 'Libre Baskerville', 'Times New Roman', serif;
+  letter-spacing: 0px;
 }
 
-a:hover {
-  opacity: 100%;
-  color: red;
+footer {
+  display: inline-block;
+  position: relative;
+  bottom: 0%;
+  align-content: center;
+  max-width: 100%;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+body {
+  margin-top: 30%;
+}
+
+h1 {
+  font-size: 65px;
+}
+
+a {
+  font-size: 120px;
 }
 
 span {
-  background-color: gray;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 18px;
-  letter-spacing: 0px;
-  font-family: 'Libre Baskerville', 'Times New Roman', serif;
+}
+
+a#right {
+  animation-name: agreen;
+  animation-duration: 1s; 
+  animation-timing-function: cubic-bezier(0,1,0,1);
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+}
+
+div#wrong1 a {
+  animation: ared;
+  animation-duration: 1s; 
+  animation-timing-function: cubic-bezier(0,1,0,1);
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+}
+
+div#wrong2 a {
+  animation: ared;
+  animation-duration: 1s; 
+  animation-timing-function: cubic-bezier(0,1,0,1);
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+}
+
+span#right {
+  animation: spangreen;
+  animation-duration: 1s; 
+  animation-timing-function: cubic-bezier(0,1,0,1);
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+}
+
+span#wrong1 {
+  animation: spanred;
+  animation-duration: 1s; 
+  animation-timing-function: cubic-bezier(0,1,0,1);
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+}
+
+span#wrong2 {
+  animation: spanred;
+  animation-duration: 1s; 
+  animation-timing-function: cubic-bezier(0,1,0,1);
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+}
+
+.hover .hovertext {
+  visibility: visible;
+  top: 50%;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  padding-right: 5%;
+  padding-left: 5%;
+  max-width: 100%;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+footer {
+  margin-top: 10%;
+}
+
+@keyframes agreen {
+  0% {
+    opacity: 15%;
+  }
+  50% {
+    color: #49fb35;
+    opacity: 100%;
+  }
+  100% {
+    opacity: 15%;
+  }
+}
+
+@keyframes ared {
+  0% {
+    opacity: 15%;
+  }
+  50% {
+    color: red;
+    opacity: 100%;
+  }
+  100% {
+    opacity: 15%;
+  }
+
+}
+
+@keyframes spangreen {
+  0% {
+    color: black;
+  }
+  50% {
+    color: #49fb35;
+  }
+  100% {
+    color: black;
+  }
+}
+
+@keyframes spanred {
+  0% {
+    color: black;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: black;
+  }
+}
+
 }

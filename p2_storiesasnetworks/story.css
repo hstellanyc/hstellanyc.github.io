@@ -9,6 +9,11 @@ header {
 	margin-bottom: 5%;
 }
 
+h2 {
+	font-family: amador, sans serif;
+	font-size: 48px;
+}
+
 .title {
 	font-size: 72px;
 	font-family: amador, sans serif;
@@ -50,10 +55,9 @@ span {
 
 .right:hover {
 	color: #49fb35;
-	animation: paused;
 }
 
-span.right {
+span#first {
 	animation-name: glow;
 	animation-duration: 1s; 
   	animation-timing-function: ease-in-out;
@@ -76,6 +80,7 @@ footer {
 	100% {
 		color: white;
 	}
+
 }
 
 @media only screen and (max-width: 1024px) {
@@ -107,6 +112,24 @@ span {
 	color: white;
 	margin: 0%;
 }
+
+span.right {
+	animation-name: glow;
+	animation-duration: 1s; 
+  	animation-timing-function: ease-in-out;
+  	animation-iteration-count: infinite;
+}
+
+@keyframes glow {
+	0% {
+		color: white;
+	}
+	50% {
+		color: #49fb35;
+	}
+	100% {
+		color: white;
+	}
   
 }
 

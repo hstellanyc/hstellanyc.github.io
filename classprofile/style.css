@@ -96,8 +96,9 @@ section {
 	font-size: 36px;
 }
 
-.fireflies {
+.embed {
 	width: 400px;
-	height: 400px;
+	height: auto;
+	display: flex;
 }
 

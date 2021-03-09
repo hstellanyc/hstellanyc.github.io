@@ -1,0 +1,101 @@
+body {
+	margin: 0px;
+}
+
+div.container	{
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 100vh;
+}
+
+div.box {
+	flex: 1 1 calc(100% / 3);
+	text-align: center;
+	vertical-align: center;
+	box-sizing: border-box;
+	border: 5px solid;
+}
+
+#one {
+	background-color: red;
+}
+
+#two {
+	background-color: #1E90FF;
+}
+
+#three {
+	background-color: yellow;
+}
+
+#four {
+	background-color: #00FF7F;
+
+}
+
+#five {
+	background-color: orange;
+}
+
+#six {
+	background-color: #9400D3;
+}
+
+p {
+	padding-top: 13vh;
+}
+
+p.truth {
+	font-size: 48px;
+	font-color: ;
+	font-family: ccbiffbamboomoutline, sans-serif;
+	animation: truth 1s infinite;
+
+}
+
+p.lie {
+	font-size: 48px;
+	font-family: ccbiffbamboom, sans-serif;
+	animation: lie 1s infinite;
+}
+
+@keyframes truth {
+	0%{
+		font-family: ccbiffbamboomoutline, sans-serif;
+	}
+	50%{
+		font-family: ccbiffbamboom, sans-serif;
+	}
+	100%{
+		font-family: ccbiffbamboomoutline, sans-serif;
+	}
+
+}
+
+@keyframes lie {
+	0%{
+		font-family: ccbiffbamboom, sans-serif;
+	}
+	50%{
+		font-family: ccbiffbamboomoutline, sans-serif;
+	}
+	100%{
+		font-family: ccbiffbamboom, sans-serif;
+	}
+
+}
+
+
+
+@media only screen and (max-width: 500px) { 
+	div.box {
+	flex: 1 1 calc(100% / 2);
+}
+	p {
+	padding-top: 5vh;
+}
+
+}
+
+
+

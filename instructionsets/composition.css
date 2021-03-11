@@ -2,7 +2,7 @@ body {
 	margin: 0px;
 }
 
-div.container	{
+div.container {
 	display: flex;
 	flex-wrap: wrap;
 	min-height: 100vh;

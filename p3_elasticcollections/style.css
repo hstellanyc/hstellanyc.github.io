@@ -1,0 +1,38 @@
+/*body {
+	background-image: url("looseleaf.png");
+	background-repeat: none;
+	background-size: cover;
+}*/
+
+h1 {
+	position: absolute;
+	text-align: center;
+	vertical-align: center;
+	top: 25px;
+	left: 25%;
+	right: 15%;
+	width: auto;
+	font-family: 'Homemade Apple', cursive;
+	font-size: 36px;
+}
+
+h2 {
+	font-family: 'Homemade Apple', cursive;
+	font-size: 24px;
+}
+
+/*div {
+	max-height: 100vh;
+	display: flex;
+	overflow-x: scroll;
+	margin-top: 18%;
+	
+}*/
+
+img {
+	width: auto;
+	height: 100px;
+}
+
+
+

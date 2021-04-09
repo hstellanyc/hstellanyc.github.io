@@ -15,6 +15,10 @@ base("pencil_table").select({view: "Grid view"}).eachPage(gotPageOfPencils, gotA
 
 // an empty array to hold our pencil data
 const pencils = [];
+const gallery = document.querySelector('.gallery');
+const container = document.querySelector('.container');
+const info = document.querySelector('#info');
+const details = document.querySelector('#details');
 
 // callback function that receives our data
 function gotPageOfPencils(records, fetchNextPage) {
@@ -41,11 +45,26 @@ function gotAllPencils(err) {
   showPencils();
 }
 
+function showInfo(event) {
+  console.log(event);
+  if (event.target.classList.contains('item')) {
+      details.innerHTML = `
+          <h2>${event.target.dataset.pencil_name}</h2>
+          <h2>${event.target.dataset.length}</h2>
+          <h2>${event.target.dataset.shade}</h2>         
+        `;
+
+        info.classList.add('show');
+  }
+
+}
+
+
 // just loop through the pencils and console.log them
 function consoleLogPencils() {
   console.log("consoleLogPencils()");
   pencils.forEach((pencils) => {
-    console.log("Pencils:", pencils);
+   console.log("Pencils:", pencils);
   });
 }
 
@@ -54,13 +73,44 @@ function showPencils() {
   console.log("showPencils()");
   pencils.forEach((pencils) => {
 
-    const h2 = document.createElement("h2");
-    h2.innerText = pencils.fields.pencil_name;
-    document.body.appendChild(h2);
+	// const name = document.createElement("h2");
+ //    name.innerText = pencils.fields.pencil_name;
+ //    name.classList.add("item");
+ //    document.querySelector(".container").append(name);
+
+ //    const length = document.createElement("h2");
+ //    length.innerText = pencils.fields.length;
+ //    length.classList.add("item");
+ //    document.querySelector(".container").append(length);
+
+ //    const shade = document.createElement("h2");
+ //    shade.innerText = pencils.fields.shade;
+ //    shade.classList.add("item");
+ //    document.querySelector(".container").append(shade);
+    // document.body.appendChild(shade);
 
     const img = document.createElement("img");
    	img.src = pencils.fields.image[0].url;
-    document.querySelector(".container").appendChild(img);
+   	img.classList.add("item");
+    document.querySelector(".gallery").append(img);
+
+    // const makeItem = document.createElement("div");
+    // makeItem.classList.add("item");
+    // document.querySelector(".container").append(makeItem);
+
+
+ //    const li = document.createElement('li');
+	// li.innerText = `${pencils.fields.pencil_name}`;
+	// li.dataset.name = pencils.fields.pencil_name;
+	// sectionName.append(li);
+
+
+	// img.addEventListener("click", function(){
+	// 	.classList.toggle("active");
+	// }
+
+	img.addEventListener('click', showInfo);
+
   });
 
 	try {
@@ -70,11 +120,15 @@ function showPencils() {
 	}
 }
 
-function displayPencils() {
-	pencils.forEach(function (pencil) {
-		let li = document.createElement('li');
-		li.innerText = `${pencil.fields.pencil_name} (${pencil.fields.image})`;
-		li.dataset.name = pencil.fields.pencil_name;
-		pencilsElement.append(li);
-	});
-}
+
+
+
+
+// function showPencils() {
+// 	pencils.forEach(function (pencil) {
+// 		const li = document.createElement('li');
+// 		li.innerText = `${pencils.fields.pencil_name} (${pencils.fields.image})`;
+// 		li.dataset.name = pencils.fields.pencil_name;
+// 		pencilsElement.append(li);
+// 	});
+// }

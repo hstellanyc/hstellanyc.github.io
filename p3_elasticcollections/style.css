@@ -4,6 +4,13 @@
 	background-size: cover;
 }*/
 
+body {
+	background-color: lightgray;
+	/*background: linear-gradient(-45deg, #00e2ff, #00ff53, #00e2ff, #00ff53);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;*/
+}
+
 h1 {
 	position: absolute;
 	text-align: center;
@@ -12,27 +19,85 @@ h1 {
 	left: 25%;
 	right: 15%;
 	width: auto;
-	font-family: 'Homemade Apple', cursive;
+	font-family: 'Titillium Web', sans-serif;
 	font-size: 36px;
 }
 
 h2 {
-	font-family: 'Homemade Apple', cursive;
-	font-size: 24px;
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 2px;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 16px;
+
 }
 
-/*div {
+div.gallery {
 	max-height: 100vh;
 	display: flex;
 	overflow-x: scroll;
-	margin-top: 18%;
-	
-}*/
+
+}
+
+
+div.container { 
+	max-height: 2.5rem;
+	padding: 0.5rem;
+	height: 2rem;
+	border: 1.5px solid black;
+	border-radius: 25px;
+
+}
+
+div#details {
+	display: flex;
+	flex-direction: row;
+	object-fit: cover;
+	max-height: 100vh;
+	justify-content: space-around;
+	align-items: center;
+	vertical-align: center;
+}
+
+#info {
+	display: none;
+}
+
+#info.show {
+	display: block;
+}
 
 img {
 	width: auto;
-	height: 100px;
+	height: 700px;
 }
+
+
+li {
+	border-color: black;
+	list-style-type: none;
+	margin: 50px;
+}
+
+/*ul {
+	display: flex;
+	overflow-x: scroll;
+}*/
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 
 

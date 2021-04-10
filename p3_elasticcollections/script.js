@@ -15,10 +15,12 @@ base("pencil_table").select({view: "Grid view"}).eachPage(gotPageOfPencils, gotA
 
 // an empty array to hold our pencil data
 const pencils = [];
-const gallery = document.querySelector('.gallery');
 const container = document.querySelector('.container');
+const gallery = document.querySelector('.gallery');
 const info = document.querySelector('#info');
 const details = document.querySelector('#details');
+const click = document.querySelector("#click");
+const body = document.querySelector("body");
 
 // callback function that receives our data
 function gotPageOfPencils(records, fetchNextPage) {
@@ -56,8 +58,18 @@ function showInfo(event) {
 
         info.classList.add('show');
   }
-
 }
+
+function paper(event) {
+	if (document.body.classList.contains('paper')) {
+		document.body.classList.remove('paper');
+  	} else {
+  		document.body.classList.add('paper');
+  }
+  
+ }
+
+
 
 
 // just loop through the pencils and console.log them
@@ -111,7 +123,11 @@ function showPencils() {
 
 	img.addEventListener('click', showInfo);
 
+	click.addEventListener('click', paper);
+
+
   });
+
 
 	try {
 		displayPencils();
@@ -119,10 +135,6 @@ function showPencils() {
 		console.log(e);
 	}
 }
-
-
-
-
 
 // function showPencils() {
 // 	pencils.forEach(function (pencil) {

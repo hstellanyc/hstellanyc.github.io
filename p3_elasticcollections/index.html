@@ -9,22 +9,45 @@
 	<link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300;400&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
 	<script type="text/javascript" src="./airtable.browser.js" defer></script>
     <script type="text/javascript" src="./script.js" defer></script>
-<body>
+</head>
+<body class="paper">
 
-<!-- 	<h1>Celeste's Pencil Case</h1> -->
-	<div class="container">
-		<aside id="info">
-			<div id="details"></div>
-		</aside>
-	</div>
+		<h1 class="title">Celeste's Pencil Case</h1>
+		<p>
+		<div class="overlay"></div>
 
+		<div class="blur">
+			<div class="container">
+				<aside id="info">
+					<div id="details"></div>
+				</aside>
+			</div>
 	
-	<div class="gallery"></div>
+			<div class="scroll"><div class="gallery"></div></div>
 
-	<button id="click">Paper</button>
-
-	
-
-
+			<!-- <div align="center">
+				<canvas id="myCanvas" width="500" height="200" style="border:2px solid black"></canvas>
+        		<br /><br />
+        		<button onclick="javascript:clearArea();return false;">Clear Area</button>
+        		Line width : <select id="selWidth">
+            			<option value="1">1</option>
+            			<option value="3">3</option>
+            			<option value="5">5</option>
+            			<option value="7">7</option>
+            			<option value="9" selected="selected">9</option>
+            			<option value="11">11</option>
+       				</select>
+        		Color : <select id="selColor">
+            			<option value="black">black</option>
+            			<option value="blue" selected="selected">blue</option>
+            			<option value="red">red</option>
+           	 			<option value="green">green</option>
+            			<option value="yellow">yellow</option>
+            			<option value="gray">gray</option>
+        			</select>
+   			</div>
+ -->
+			<button id="click">Paper</button>
+		</div>
 </body>
 </html>

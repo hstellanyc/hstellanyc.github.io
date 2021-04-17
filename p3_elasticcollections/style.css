@@ -1,16 +1,8 @@
-/*body {
-	background-image: url("looseleaf.png");
-	background-repeat: none;
-	background-size: cover;
-}*/
-
 body {
 	background-color: #cfc7c4;
 	max-height: 100vh;
 	max-width: 100vw; 
-	/*background: linear-gradient(-45deg, #00e2ff, #00ff53, #00e2ff, #00ff53);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;*/
+
 }
 
 .paper {
@@ -19,6 +11,37 @@ body {
 	background-size: cover;
 }
 
+.overlay {
+	background-color: white;
+	z-index: 2;
+	width: 100vw;
+	height: 100vh;
+	top: 0px;
+	left: 0px;
+	position: fixed;
+	opacity: 60%;
+	filter: blur(10px);
+
+}
+
+.goaway {
+	animation: goaway 1s forwards;
+}
+
+.blur {
+	filter: blur(10px);
+}
+
+h1 {
+	position: fixed;
+	margin-right: 10%;
+	margin-left: 20%;
+	margin-top: 20%; 
+	font-family: 'Homemade Apple', sans-serif;
+	font-size: 100px;
+	z-index: 3;
+	opacity: 100%;
+}
 button {
 	align-items: center;
 	justify-content: center;
@@ -33,13 +56,17 @@ button {
 	background-color: transparent;
 }
 
+#click {
+	margin-top: 2%;
+}
+
 button:hover {
 	background-color: black;
 	color: white;
 	cursor: pointer;
 }
 
-h1 {
+/*h1 {
 	position: absolute;
 	text-align: center;
 	vertical-align: center;
@@ -50,7 +77,7 @@ h1 {
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 36px;
 }
-
+*/
 h2 {
 	display: inline;
 	margin: 0px;
@@ -63,13 +90,29 @@ h2 {
 
 div.gallery {
 	max-height: 100vh;
+/*	margin-left: 800px;*/
 	display: flex;
-	overflow-x: scroll;
+	position: sticky;
+	/*-webkit-animation-name: move;
+  	-webkit-animation-duration: 4s;
+  	-webkit-animation-iteration-count: infinite;
+  	-webkit-animation-direction: left;
+  	-webkit-animation-timing-function: linear;*/
 
 }
 
+/*.gallery:hover {
+  -webkit-animation-play-state: paused;
+}*/
+
+div.scroll {
+	display: flex;
+	overflow-x: scroll;
+}
+
 .gallery::-webkit-scrollbar {
-  display: none;
+	opacity: 50%;
+	position: fixed;
 }
 
 
@@ -103,6 +146,12 @@ div#details {
 img {
 	width: auto;
 	height: 700px;
+	
+	/*border-bottom: 20px solid black;*/
+	
+}
+.chosen {
+	background-color: black;
 }
 
 
@@ -117,7 +166,6 @@ li {
 	overflow-x: scroll;
 }*/
 
-
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -130,6 +178,28 @@ li {
 	}
 }
 
+@-webkit-keyframes move {
+  0% {
+    margin-right: 1000px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes goaway {
+	0% {
+		display: block;
+		opacity: 100%;
+		height: 100vh;
+	
+	}
+	100% {
+		display: none;
+		opacity: 0%;
+		height: 0vh;
+	}
+}
 
 
 

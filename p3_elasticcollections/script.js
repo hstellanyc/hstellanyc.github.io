@@ -118,15 +118,6 @@ function showPencils() {
        document.querySelector(".container").append(makeItem);
 
 
- //    const li = document.createElement('li');
-	// li.innerText = `${pencils.fields.pencil_name}`;
-	// li.dataset.name = pencils.fields.pencil_name;
-	// sectionName.append(li);
-
-
-	// img.addEventListener("click", function(){
-	// 	.classList.toggle("active");
-	// }
 
 	img.addEventListener('click', showInfo);
   img.addEventListener('click', highlight);
@@ -134,51 +125,6 @@ function showPencils() {
   cover.addEventListener('click', shift);
 
 
-// var mousePressed = false;
-// var lastX, lastY;
-// var ctx;
-
-// function InitThis() {
-//     ctx = document.body.getContext("2d");
-
-//     document.body.mousedown(function (e) {
-//         mousePressed = true;
-//         Draw(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, false);
-//     });
-
-//     document.body.mousemove(function (e) {
-//         if (mousePressed) {
-//             Draw(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, true);
-//         }
-//     });
-
-//     document.body.mouseup(function (e) {
-//         mousePressed = false;
-//     });
-//     document.body.mouseleave(function (e) {
-//         mousePressed = false;
-//     });
-// }
-
-// function Draw(x, y, isDown) {
-//     if (isDown) {
-//         ctx.beginPath();
-//         ctx.strokeStyle = $('#selColor').val();
-//         ctx.lineWidth = $('#selWidth').val();
-//         ctx.lineJoin = "round";
-//         ctx.moveTo(lastX, lastY);
-//         ctx.lineTo(x, y);
-//         ctx.closePath();
-//         ctx.stroke();
-//     }
-//     lastX = x; lastY = y;
-// }
-  
-// function clearArea() {
-//     // Use the identity matrix while clearing the canvas
-//     ctx.setTransform(1, 0, 0, 1, 0, 0);
-//     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-// }
 
 });
 
@@ -188,12 +134,3 @@ function showPencils() {
 		console.log(e);
 	}
 }
-
-// function showPencils() {
-// 	pencils.forEach(function (pencil) {
-// 		const li = document.createElement('li');
-// 		li.innerText = `${pencils.fields.pencil_name} (${pencils.fields.image})`;
-// 		li.dataset.name = pencils.fields.pencil_name;
-// 		pencilsElement.append(li);
-// 	});
-// }

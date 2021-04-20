@@ -12,7 +12,7 @@ body {
 }
 
 .overlay {
-	background-color: white;
+	background-color: #f7f2f0;
 	z-index: 2;
 	width: 100vw;
 	height: 100vh;
@@ -78,20 +78,14 @@ h2 {
 
 div.gallery {
 	max-height: 100vh;
-/*	margin-left: 800px;*/
 	display: flex;
 	position: sticky;
-	/*-webkit-animation-name: move;
-  	-webkit-animation-duration: 4s;
-  	-webkit-animation-iteration-count: infinite;
-  	-webkit-animation-direction: left;
-  	-webkit-animation-timing-function: linear;*/
 
 }
 
-/*.gallery:hover {
+.gallery:hover {
   -webkit-animation-play-state: paused;
-}*/
+}
 
 div.scroll {
 	display: flex;

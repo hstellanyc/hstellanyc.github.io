@@ -15,16 +15,16 @@ base("pencil_table").select({view: "Grid view"}).eachPage(gotPageOfPencils, gotA
 
 // an empty array to hold our pencil data
 const pencils = [];
+const body = document.querySelector("body");
 const container = document.querySelector('.container');
 const gallery = document.querySelector('.gallery');
-const blur = document.querySelector('.blur');
 const info = document.querySelector('#info');
 const details = document.querySelector('#details');
+const item = document.querySelector('.item');
 const click = document.querySelector("#click");
-const body = document.querySelector("body");
 const cover = document.querySelector('.overlay');
 const title = document.querySelector('.title');
-const item = document.querySelector('.item');
+const blur = document.querySelector('.blur');
 // callback function that receives our data
 function gotPageOfPencils(records, fetchNextPage) {
   console.log("gotPageOfPencils()");
@@ -57,18 +57,26 @@ function showInfo(event) {
           <h2>${event.target.dataset.shade}</h2>  
           <h2>${event.target.dataset.pencil_name}</h2>
           <h2>${event.target.dataset.length}</h2>
-       
         `;
 
         info.classList.add('show');
   }
 }
 
+ function highlight(event) {
+  if (info.classList.contains('show')) {
+    document.querySelectorAll('.chosen').forEach((pencil) => pencil.classList.remove('chosen'))
+    event.target.setAttribute("class", "chosen");
+ } else {
+    event.target.classList.remove( "chosen");
+ }
+}
+
 function paper(event) {
 	if (document.body.classList.contains('paper')) {
 		document.body.classList.remove('paper');
   	} else {
-  		document.body.classList.add('paper');
+  	document.body.classList.add('paper');
   } 
  }
 
@@ -84,9 +92,7 @@ function paper(event) {
   }
  }
 
- function highlight(event) {
-    img.classList.add('chosen');
- }
+
 
 // just loop through the pencils and console.log them
 function consoleLogPencils() {
@@ -100,19 +106,6 @@ function consoleLogPencils() {
 function showPencils() {
   console.log("showPencils()");
   pencils.forEach((pencil) => {
-	// const name = document.createElement("h2");
- //    name.innerText = pencils.fields.pencil_name;
- //    name.classList.add("item");
- //    document.querySelector(".container").append(name);
- //  const length = document.createElement("h2");
- //    length.innerText = pencils.fields.length;
- //    length.classList.add("item");
- //    document.querySelector(".container").append(length);
- //  const shade = document.createElement("h2");
- //    shade.innerText = pencils.fields.shade;
- //    shade.classList.add("item");
- //    document.querySelector(".container").append(shade);
-    // document.body.appendChild(shade);
      const img = document.createElement("img");
     	 img.src = pencil.fields.image[0].url;
    	   img.classList.add("item");
@@ -136,7 +129,7 @@ function showPencils() {
 	// }
 
 	img.addEventListener('click', showInfo);
-  img.addEventListener('click', highlight)
+  img.addEventListener('click', highlight);
 	click.addEventListener('click', paper);
   cover.addEventListener('click', shift);
 

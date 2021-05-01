@@ -5,18 +5,126 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="script.js" defer></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-	
-	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>	
 </head>
 <body>
-	<canvas id="canvas" width="100px" height="100px"></canvas>
+	<nav>
+		<h1>ToonStickers</h1>
+		<a href=""></a>
+	</nav>
+	<div class="canvas">
+		<img class="faceshape" src="features/faceshape/fs_a3.png">
+	</div>
+	<div class="tab">
+  		<button class="tablinks" onclick="openOptions(event, 'faceShape')">Face Shape</button>
+  		<button class="tablinks" onclick="openOptions(event, 'hairStyle')">Hair Style</button>
+  		<button class="tablinks" onclick="openOptions(event, 'hairColor')">Hair Color</button>
+  		<button class="tablinks" onclick="openOptions(event, 'eyes')">Eyes</button>
+  		<button class="tablinks" onclick="openOptions(event, 'eyebrows')">Eyebrows</button>
+  		<button class="tablinks" onclick="openOptions(event, 'nose')">Nose</button>
+  		<button class="tablinks" onclick="openOptions(event, 'mouth')">Mouth</button>
+  		<button class="tablinks" onclick="openOptions(event, 'clothes')">Clothes</button>
+
+	</div>
+
+  		<div id="faceShape" class="tabcontent">
+  		<div class="scroll">
+  			<!-- <button class="modify" data-type="faceshape"><img src="features/faceshape/fs_a1.svg"></button>
+  			<button class="modify" data-type="faceshape"><img src="features/faceshape/fs_a2.svg"></button>
+  			<button class="modify" data-type="faceshape"><img src="features/faceshape/fs_a3.svg"></button>
+  			<button class="modify" data-type="faceshape"><img src="features/faceshape/fs_a4.svg"></button>
+  			<button class="modify" data-type="faceshape"><img src="features/faceshape/fs_a5.svg"></button>
+  			<button class="modify" data-type="faceshape"><img src="features/faceshape/fs_a6.svg"></button> -->
+
+  			<button class="modify" data-type="faceshape"><img src="features/faceshape/fs_a1.png"></button>
+  			<button class="modify" data-type="faceshape"><img src="features/faceshape/fs_a2.png"></button>
+  			<button class="modify" data-type="faceshape"><img src="features/faceshape/fs_a3.png"></button>
+  			<button class="modify" data-type="faceshape"><img src="features/faceshape/fs_a4.png"></button>
+  			<button class="modify" data-type="faceshape"><img src="features/faceshape/fs_a5.png"></button>
+  			<button class="modify" data-type="faceshape"><img src="features/faceshape/fs_a6.png"></button>
+  			<button class="modify" data-type="faceshape"><img src="features/faceshape/fs_b1.png"></button>
+  			<button class="modify" data-type="faceshape"><img src="features/faceshape/fs_b2.png"></button>
+  			<button class="modify" data-type="faceshape"><img src="features/faceshape/fs_b3.png"></button>
+  			<button class="modify" data-type="faceshape"><img src="features/faceshape/fs_b4.png"></button>
+  			<button class="modify" data-type="faceshape"><img src="features/faceshape/fs_b5.png"></button>
+  			<button class="modify" data-type="faceshape"><img src="features/faceshape/fs_b6.png"></button>
+  		</div>
+  	</div>
+
+	<div id="hairStyle" class="tabcontent">
+  		<div class="scroll">
+  			<!-- <button class="modify" data-type="hairstyle"><img src="features/hairstyle/hs1.svg"></button>
+  			<button class="modify" data-type="hairstyle"><img src="features/hairstyle/hs2.svg"></button>
+  			<button class="modify" data-type="hairstyle"><img src="features/hairstyle/hs3.svg"></button>
+  			<button class="modify" data-type="hairstyle"><img src="features/hairstyle/hs4.svg"></button>
+  			<button class="modify" data-type="hairstyle"><img src="features/hairstyle/hs5.svg"></button> -->
+
+  			<button class="modify" data-type="hairstyle"><img src="features/hairstyle/testhair1.png"></button>
+  			<button class="modify" data-type="hairstyle"><img src="features/hairstyle/testhair2.png"></button>
+  			<button class="modify" data-type="hairstyle"><img src="features/hairstyle/testhair3.png"></button>
+  		</div>
+	</div>
+
+	<div id="hairColor" class="tabcontent">
+  		<h3>Hair Color</h3>
+  		<p>Choose your Hair Color</p> 
+  		<div class="scroll">
+  			<input onInput="draw_color = this.value" type="color" class="color-picker">
+  			<button class="modify" data-type="hairstyle"><img src="h10.svg"></button>
+  			<!-- <div onClick="change_color(this)" class="color-field" style="background: rgba(255, 237, 199);"></div>	
+  			<div onClick="change_color(this)" class="color-field" style="background: rgba(235, 189, 94);"></div>	
+  			<div onClick="change_color(this)" class="color-field" style="background: rgba(143, 107, 33);"></div> -->	
+  		</div>
+	</div>
+
+	<div id="eyes" class="tabcontent">
+  		<h3>Eyes</h3>
+  		<p>Choose your Eyes</p> 
+  		<div class="scroll">
+  			
+  		</div>
+	</div>
+
+	<div id="eyebrows" class="tabcontent">
+  		<h3>Eyebrows</h3>
+  		<p>Choose your Eyebrows</p> 
+  		<div class="scroll">
+  			
+  		</div>
+	</div>
+
+	<div id="nose" class="tabcontent">
+  		<h3>Nose</h3>
+  		<p>Choose your Nose</p> 
+  		<div class="scroll">
+  			
+  		</div>
+	</div>
+
+	<div id="mouth" class="tabcontent">
+  		<h3>Mouth</h3>
+  		<p>Choose your Mouth</p> 
+  		<div class="scroll">
+  			
+  		</div>
+	</div>
+
+	<div id="clothes" class="tabcontent">
+  		<h3>Clothes</h3>
+  		<p>Choose your Clothes</p> 
+  		<div class="scroll">
+  			
+  		</div>
+	</div>
+	<!-- <canvas id="canvas" width="100px" height="100px"></canvas>
 	<div class="tools">
 		<button onClick="undo_last()" type="button" class="button">Undo</button>
 		<button onClick="clear_canvas()" type="button" class="button">Clear</button>
-	
+
 		<div onClick="change_color(this)" class="color-field" style="background: red;"></div>
 		<div onClick="change_color(this)" class="color-field" style="background: blue;"></div>
 		<div onClick="change_color(this)" class="color-field" style="background: green;"></div>
@@ -25,5 +133,7 @@
 		<input onInput="draw_color = this.value" type="color" class="color-picker">
 		<input onInput="draw_width = this.value" type="range" min="1" max="100" class="pen-range">
 	</div>
+
+	<a id='downloadLink' onClick="createDownload" download='myDrawing.png'>Download Image</a> -->
 </body>
 </html>

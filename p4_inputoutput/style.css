@@ -99,6 +99,15 @@ button.modify {
 	cursor: pointer;
 }
 
+svg {
+	width: 200px;
+	height: auto;
+	padding-right: 75px;
+	background-color: transparent;
+}
+
+
+
 
 
 

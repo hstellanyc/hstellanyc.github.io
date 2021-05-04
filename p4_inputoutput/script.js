@@ -1,6 +1,9 @@
 layer = 3;
 let modify = document.querySelector(".modify");
 let canvas = document.querySelector(".canvas");
+let haircolor = document.querySelector(".cls-1");
+let draw_color = "black";
+
 
 
 function openOptions(event, feature) {
@@ -17,8 +20,6 @@ function openOptions(event, feature) {
   event.currentTarget.className += " active";
 }
 
-
-
 // document.querySelector('.scroll').addEventListener('click', (event) => {
 //     if (event.target.tagName === 'IMG') {
 //         //canvas.src = event.target.src;
@@ -32,11 +33,8 @@ function openOptions(event, feature) {
 //         	featureImg.classList.add(feature);
 //         	featureImg.src = event.target.src;
 //         	canvas.append(featureImg);
-
 //         } 
 //     }
-
-    
 // });
 
 function addFeature(event) {
@@ -56,6 +54,14 @@ function addFeature(event) {
         }
   }
 };
+
+
+function change_haircolor(element) {
+  draw_color = element.style.background;
+  featureImg = draw_color;
+
+
+}
 
 document.querySelector('#faceShape .scroll').addEventListener('click', addFeature);
 document.querySelector('#hairStyle .scroll').addEventListener('click', addFeature);

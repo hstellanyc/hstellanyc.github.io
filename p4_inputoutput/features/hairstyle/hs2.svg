@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
-  <path style="fill: rgb(85, 39, 39);" transform="matrix(0, -1, 1, 0, -43.217148, 569.018005)" d="M 211.875 198.458 A 187.544 187.544 0 1 1 211.875 386.002 A 137.235 137.235 0 1 0 211.875 198.458 Z" bx:shape="crescent 374.293 292.23 187.544 300 0.7 1@9039e04a"/>
-  <rect x="61.469" y="142.847" width="99.599" height="357.153" style="fill: rgb(85, 39, 39);"/>
-  <rect x="336.958" y="142.847" width="99.599" height="357.153" style="fill: rgb(85, 39, 39);"/>
-</svg>

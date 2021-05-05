@@ -11,7 +11,14 @@ nav {
 	background-color: black;
 }
 
+/*.canvas_container {
+	height: 100%;
+ 	position: relative;
+  	width: 100%;
+}
+*/
 .canvas {
+	position: relative;
 	width: 300px;
 	height: 300px;
 	margin-left: 40vw;
@@ -21,14 +28,49 @@ nav {
 	border: 5px solid black;
 	align-items: center;
 	align-content: center;
+/*	z-index: 1;*/
 }
 
+/*.canvas_mirror {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%; 
+}*/
+
+.canvas svg {
+	position: absolute;
+    width: 100%;
+}
+
+
 .canvas img {
-	width: 300px;
-	height: 300px;
+	width: 100%;
+/*	height: 300px;*/
 	padding: 0px;
 	position: absolute;
 	background-color: transparent;
+}
+
+.canvas .eyes,
+.canvas .eyebrows,
+.canvas .nose,
+.canvas .mouth {
+    z-index: 1;
+}
+
+.canvas .fronthair {
+    z-index: 2;
+}
+
+.canvas .clothes {
+    z-index: 3;
+}
+
+.canvas .backhair {
+	z-index: -1;
+	display: block;
 }
 
 /* Style the tab */
@@ -105,6 +147,7 @@ svg {
 	padding-right: 75px;
 	background-color: transparent;
 }
+
 
 
 

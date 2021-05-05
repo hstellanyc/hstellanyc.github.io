@@ -1,11 +1,12 @@
+changeHairColor(document.querySelector('#hairColor input').value);
 layer = 3;
 let modify = document.querySelector(".modify");
 let canvas = document.querySelector(".canvas");
-let haircolor = document.querySelector(".cls-1");
-let draw_color = "black";
+let backhair = document.querySelector(".canvas .backhair");
 
 
 
+//functions 
 function openOptions(event, feature) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -20,6 +21,98 @@ function openOptions(event, feature) {
   event.currentTarget.className += " active";
 }
 
+function addFeature() {
+  const feature = this.dataset.type;
+  const featureImg = this.firstElementChild.cloneNode(true);
+  featureImg.classList.add(feature);
+  while (canvas.querySelectorAll(`.${feature}`).length > 0) {
+    canvas.querySelector(`.${feature}`).remove();
+  }
+  canvas.appendChild(featureImg);
+};
+
+function changeHairColor(color) {
+    document.querySelectorAll('path.hair-color').forEach((svg) => {
+        svg.style.fill = color;
+    });
+}
+
+function changeEyeColor(color) {
+    document.querySelectorAll('path.eye-color').forEach((svg) => {
+        svg.style.fill = color;
+    });
+}
+
+
+function changeClothingColor(color) {
+    document.querySelectorAll('path.clothing-color').forEach((svg) => {
+        svg.style.fill = color;
+    });
+}
+
+// function remove() {
+//     backhair.
+// }
+
+//event listeners
+document.querySelectorAll('.modify').forEach((button) => {
+  button.addEventListener('click', addFeature);
+});
+
+document.querySelector('#hairColor input').addEventListener('input', (event) => {
+    changeHairColor(event.target.value);
+});
+
+document.querySelector('#eyeColor input').addEventListener('input', (event) => {
+    changeEyeColor(event.target.value);
+});
+
+
+document.querySelector('#clothingColor input').addEventListener('input', (event) => {
+    changeClothingColor(event.target.value);
+});
+
+// document.querySelectorAll('.remove').forEach((button) => {
+//   button.addEventListener('click', remove);
+// });
+
+
+
+
+
+//save button
+
+// var link = document.createElement('a');
+//     link.innerHTML = 'download image';
+// link.addEventListener('click', function(ev) {
+//     link.href = canvas.toDataURL();
+//     link.download = "mypainting.png";
+// }, false);
+
+
+function download(){
+  let canvas = document.querySelector(".canvas");
+  var link = document.createElement('a');
+  link.download = 'filename.png';
+  link.href = canvas.toDataURL("image/png")
+}
+// function saveimg()
+// {
+//   var link = document.createElement('a');
+
+//   link.href = canvas.toDataURL("image/png;base64");
+//   link.download = "mypainting.png";
+//     // var c = document.getElementById('mycanvas');
+//     // var t = c.getContext('2d');
+//     // window.location.href = image;
+
+//     // window.open('', document.getElementById('mycanvas').toDataURL());
+// }
+
+
+
+
+//old code
 // document.querySelector('.scroll').addEventListener('click', (event) => {
 //     if (event.target.tagName === 'IMG') {
 //         //canvas.src = event.target.src;
@@ -27,44 +120,37 @@ function openOptions(event, feature) {
 //         let featureElement = canvas.querySelector(`.${feature}`);
 //         console.log(feature, featureElement);
 //         if (featureElement) {
-//         	featureElement.src = event.target.src;
+//          featureElement.src = event.target.src;
 //         } else {
-//         	let featureImg = document.createElement('img');
-//         	featureImg.classList.add(feature);
-//         	featureImg.src = event.target.src;
-//         	canvas.append(featureImg);
+//          let featureImg = document.createElement('img');
+//          featureImg.classList.add(feature);
+//          featureImg.src = event.target.src;
+//          canvas.append(featureImg);
 //         } 
 //     }
 // });
 
-function addFeature(event) {
-  if (event.target.tagName === 'IMG') {
-    let feature = event.target.parentNode.dataset.type;
-        let featureElement = canvas.querySelector(`.${feature}`);
-        console.log(feature, featureElement);
-        if (featureElement) {
-        	featureElement.src = event.target.src;
-        } else {
-        	let featureImg = document.createElement('img');
-        	featureImg.style.zIndex = layer;
-        	layer += 1;
-        	featureImg.classList.add(feature);
-        	featureImg.src = event.target.src;
-        	canvas.append(featureImg);
-        }
-  }
-};
+// function addFeature(event) {
+//   if (event.target.tagName === 'IMG') {
+//     let feature = event.target.parentNode.dataset.type;
+//         let featureElement = canvas.querySelector(`.${feature}`);
+//         console.log(feature, featureElement);
+//         if (featureElement) {
+//          featureElement.src = event.target.src;
+//         } else {
+//          let featureImg = document.createElement('img');
+//          featureImg.style.zIndex = layer;
+//          layer += 1;
+//          featureImg.classList.add(feature);
+//          featureImg.src = event.target.src;
+//          canvas.append(featureImg);
+//         }
+//   }
+// };
 
 
-function change_haircolor(element) {
-  draw_color = element.style.background;
-  featureImg = draw_color;
-
-
-}
-
-document.querySelector('#faceShape .scroll').addEventListener('click', addFeature);
-document.querySelector('#hairStyle .scroll').addEventListener('click', addFeature);
+// document.querySelector('#faceShape .scroll').addEventListener('click', addFeature);
+// document.querySelector('#hairStyle .scroll').addEventListener('click', addFeature);
 
 
 

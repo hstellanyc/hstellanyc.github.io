@@ -1,5 +1,5 @@
 body {
- 	font-family: 'Itim', cursive;
+	font-family: 'Itim', cursive;
 }
 
 nav {
@@ -28,7 +28,7 @@ nav {
 	border: 5px solid black;
 	align-items: center;
 	align-content: center;
-/*	z-index: 1;*/
+	/*	z-index: 1;*/
 }
 
 /*.canvas_mirror {
@@ -36,41 +36,27 @@ nav {
   left: 0;
   position: absolute;
   top: 0;
-  width: 100%; 
+  width: 100%;
 }*/
+.canvas .target {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
 
 .canvas svg {
 	position: absolute;
-    width: 100%;
+	width: 100%;
 }
-
 
 .canvas img {
 	width: 100%;
-/*	height: 300px;*/
+	/*	height: 300px;*/
 	padding: 0px;
 	position: absolute;
 	background-color: transparent;
-}
-
-.canvas .eyes,
-.canvas .eyebrows,
-.canvas .nose,
-.canvas .mouth {
-    z-index: 1;
-}
-
-.canvas .fronthair {
-    z-index: 2;
-}
-
-.canvas .clothes {
-    z-index: 3;
-}
-
-.canvas .backhair {
-	z-index: -1;
-	display: block;
 }
 
 /* Style the tab */
@@ -121,7 +107,6 @@ div.scroll {
 	overflow-x: scroll;
 	display: flex;
 	flex-direction: row;
-
 }
 
 img {
@@ -147,12 +132,6 @@ svg {
 	padding-right: 75px;
 	background-color: transparent;
 }
-
-
-
-
-
-
 
 /*:root {}
 

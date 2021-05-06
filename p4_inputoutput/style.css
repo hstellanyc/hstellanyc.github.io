@@ -12,6 +12,16 @@ nav {
 	background-color: #121212;
 }
 
+h1 {
+	font-family: freude, sans-serif;
+	font-size: 30px;
+	margin-bottom: 0px;
+	margin-top: 5px;
+	margin-left: 45%;
+	position: fixed;
+	color: white;
+}
+
 button.save {
 	background-color: transparent;
 	color: white;
@@ -146,6 +156,26 @@ svg {
 	height: auto;
 	padding-right: 75px;
 	background-color: transparent;
+}
+
+h2 {
+	position: fixed;
+	margin-left: 38%;
+	margin-top: 35px;
+	margin-bottom: 30px;
+	font-size: 20px;
+
+}
+
+input {
+	padding: 0px;
+	border:none;
+	background-color: transparent;
+	width: 100px;
+	height: 50px;
+	margin-left: 55%;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 /*:root {}

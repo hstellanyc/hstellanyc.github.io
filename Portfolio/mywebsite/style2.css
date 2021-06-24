@@ -1,0 +1,410 @@
+@font-face {
+    font-family: 'ChaletBook';
+    src: url('chalet/ChaletBook-Italic.woff2') format('woff2'),
+        url('chalet/ChaletBook-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ChaletBook';
+    src: url('chalet/ChaletBook.woff2') format('woff2'),
+        url('chalet/ChaletBook.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ChaletBook';
+    src: url('chalet/ChaletBook-BoldItalic.woff2') format('woff2'),
+        url('chalet/ChaletBook-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ChaletBook';
+    src: url('chalet/ChaletBook-Bold.woff2') format('woff2'),
+        url('chalet/ChaletBook-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {	
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-top: 50px;
+	background-color: white;
+	color: #121212;
+	font-family: chaletbook;
+}
+
+
+/*header*/
+header {
+	display: inline;
+	text-align: center;
+}
+
+h1 {
+	position: absolute;
+	font-weight: bold;
+	font-size: 24px;
+	letter-spacing: 0.1%;
+	margin: auto;
+	margin-top: -5.5px;
+	z-index: 2;
+	cursor: pointer;
+
+}
+
+nav {
+	position: relative;
+	display: inline-flex;
+	flex-direction: row;
+	margin-left: 1040px;
+}
+
+li {
+	position: relative;
+	text-decoration: none;
+	list-style-type: none;
+	margin: auto;
+	font-weight: lighter;
+	font-size: 18px;
+	margin-right: 50px;
+	cursor: pointer;
+}
+
+a.current {	
+	font-weight: bold;
+}
+
+a.nonselect {
+	color: #c1c1c1;
+}
+
+a {
+	text-decoration: none;
+	color: #121212;
+}
+
+
+svg {
+	min-width: 20px;
+	min-height: 20px;
+	width: 20px;
+	height: auto;
+	box-shadow: none;
+	object-fit: cover;
+	cursor: pointer;
+}
+
+.cls-1 {
+	fill: #121212;
+}
+
+
+button {
+	width: 20px;
+	height: 20px;
+	display: inline-flex;
+	padding: 0px 0px 23px 0px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+/*body*/
+.grid {
+	position: absolute;
+	text-align: center;
+	margin-top: 50px;
+
+}
+.row-one {
+	position: absolute;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	column-gap: 120px;
+
+}
+
+.row-two {
+	position: absolute;
+	top: 500px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	column-gap: 95px;
+	padding-bottom: 100px;
+
+}
+
+img.project-one  {
+	width: 300px;
+	height: auto;
+	text-align: center
+	margin-left: auto;
+	margin-right: auto;
+
+
+}
+
+
+img.project-two  {
+	width: 500px;
+	height: auto;
+	text-align: center
+	margin-left: auto;
+	margin-right: auto;
+
+
+}
+
+img.project-three  {
+	width: 300px;
+	height: auto;
+	text-align: center
+	margin-left: auto;
+	margin-right: auto;
+
+
+}
+video.project-four {
+	width: 250px;
+	height: auto;
+	text-align: center
+	margin-left: auto;
+	margin-right: auto;
+
+
+}
+
+img.project-five  {
+	width: 600px;
+	height: auto;
+	text-align: center
+	margin-left: auto;
+	margin-right: auto;
+
+
+}
+
+img.project-six  {
+	width: 300px;
+	height: auto;
+	text-align: center
+	margin-left: auto;
+	margin-right: auto;
+
+
+}
+
+div.project:hover {
+	box-shadow: none;
+}
+
+div.project:hover img {
+	transition: opacity 300ms ease-in-out;
+	transition-delay: 0s;
+	opacity: 0%;
+}
+
+
+div.project:hover video {
+	transition: opacity 300ms ease-in-out;
+	transition-delay: 0s;
+	opacity: 0%;
+}
+
+
+div.project:hover a.project-title {
+	transition: opacity 300ms ease-in-out;
+	transition-delay: 0s;
+	opacity: 100%;
+}
+
+a.project-title {
+	position: absolute;
+	display: inline-flex;
+	flex-direction: row;
+	font-family: chaletbook;
+	font-weight: medium;
+	font-size: 30px;
+    vertical-align: middle;
+    z-index: 5;
+    opacity: 0%;
+}
+
+#one {
+	top: 185px;
+	left: 75px;
+}
+
+#two {
+	top: 170px;
+    left: 615px;
+}
+
+#three {
+	top: 170px;
+    left: 1110px;
+}
+
+#four {
+	top: 150px;
+    left: 75px;
+}
+
+#five {
+	top: 220px;
+    left: 560px;
+}
+
+#six {
+	top: 200px;
+    left: 1145px;
+}
+
+
+
+/*hidden classes*/
+.dark {
+	background-color: #121212;
+	box-shadow: none;
+	transition: .9s;	
+}
+
+.light {
+	background-color: white;
+	box-shadow: none;
+	transition: .9s;	
+}
+
+.textwhite {
+	color: white;
+	font-family: chaletbook;
+	box-shadow: none;
+	transition: .9s;	
+}
+
+.textblack {
+	color: #121212;
+	font-family: chaletbook;
+	box-shadow: none;
+	transition: .9s;	
+
+}
+
+.iconlight {
+	fill: white;
+	transition: .9s;	
+}
+
+.icondark {
+	fill: #121212;
+	transition: .9s;	
+}
+
+@media only screen and (max-width: 1024px) {
+
+body {
+	position: absolute;
+	margin-left: 90px;
+	margin-right: 90px;
+	margin-top: 90px;
+}
+.row-one {
+	position: relative;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-row-gap: 50px;
+	margin-top: 50px;
+	left: -40px;
+}
+
+.row-two {
+	position: relative;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-row-gap: 50px;
+	top: -700px;
+	left: -40px;
+
+}
+
+h1 {
+	margin-top: -3px;
+	font-size: 47px;
+}
+
+nav {
+	margin-left: 550px;
+}
+
+li {
+	font-size: 36px;
+	margin-right: 100px;
+}
+
+svg {
+	min-width: 40px;
+	min-height: 40px;
+	width: 40px;
+	height: auto;
+
+}
+
+div.project {
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+img.project-one {
+	width: 90%;
+	height: auto;
+}
+img.project-two {
+	width: 90%;
+	height: auto;
+}
+img.project-three {
+	position: absolute;
+	left: 100px;
+    top: -600px;
+	width: 80%;
+	height: auto;
+}
+
+video.project-four {
+	position: absolute;
+	left: 100px;
+	width: 80%;
+	height: auto;
+}
+
+img.project-five {
+	width: 80%;
+	height: auto;
+}
+
+img.project-six {
+	width: 80%;
+	height: auto;
+	top: -550px;
+    left: 0px;
+    position: relative;
+}
+}

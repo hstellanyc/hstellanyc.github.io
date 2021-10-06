@@ -8,6 +8,7 @@
   z-index: 1;
 }
 
+
 #content {
   position: relative;
   width: 100vw;
@@ -36,12 +37,11 @@ h1 {
 iframe {
   	width: 700px;
   	border-radius: 3%;
-  	position: ;
+  	position: relative;
 }
 
 .tenor-gif-embed {
   position: relative;
-  border-radius: 50%;
 }
 
 a.back {

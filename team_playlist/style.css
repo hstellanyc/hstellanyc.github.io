@@ -1,0 +1,46 @@
+#video {
+  position: fixed;
+  float: left;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 1;
+}
+
+#content {
+  position: relative;
+  margin-top: 170px;
+  padding: 50px;
+  color: white;
+  font-family: playfair display;
+  letter-spacing: 0.5px;
+  font-weight: lighter;
+  z-index: 2;
+}
+
+h1 {
+  position: fixed;
+  top: 5px;
+  left: 10px;
+  font-family: 'VT323', monospace;
+  color: white;
+  font-size: 14px;
+}
+
+iframe {
+  	width: 700px;
+  	border-radius: 3%;
+  	position: absolute;
+}
+
+a.back {
+	position: fixed;
+	top: 5px;
+	left: 10px;
+	font-family: 'VT323', monospace;
+	color: white;
+	font-size: 24px;
+}
+
+
